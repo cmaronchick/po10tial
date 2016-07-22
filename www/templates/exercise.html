@@ -1,0 +1,26 @@
+<ion-view title="Exercise | {{ exercise.name }}">
+<ion-content>
+    <!-- List all existing favorites -->
+    <ion-list>
+      <ion-item
+        class="item-icon-right"
+        ng-repeat="set in sets track by set.id">
+        {{ set.date}} | {{ set.weight }} | {{ set.reps }} 
+        <ion-option-button class="button-assertive" ng-click="deleteExercise(exercise)">
+          Remove
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+    <!-- Display message when no favorites exist -->
+    <div class="vertical-center-container" ng-show="!sets.length">
+      <div class="vertical-center text-center">
+        <h1><i class="icon ion-heart-broken assertive"></i></h1>
+        <p>Looks like you haven't completed any sets yet...</p>
+      </div>
+    </div>
+    <div class="timerbutton">
+      <button ui-sref="timer({ exerciseId: exercise.id })" class="button button-assertive">Do Exercise</button>
+    </div>
+</ion-content>
+</ion-view>

@@ -1,0 +1,28 @@
+/* Empty. Add your own CSS if you like */
+#bigcircle{
+    width: 60%;
+    margin: 0 auto;
+}
+.button {
+    float: left;
+    margin-right: 10px;
+}
+.progress{
+            position: absolute;
+            color: #bbb;
+            font-weight: 100;
+            line-height: 1;
+        }
+
+.progress-wrapper{
+    position: relative;
+}
+#totalReps {
+    font-size: 2.0em;
+    padding: 10px;
+}
+
+.timerbutton {
+    margin:10px;
+}
+h1 {margin: 10px;}

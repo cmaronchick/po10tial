@@ -1,0 +1,7 @@
+<form name="formAddExercise" no-validate>
+  <label class="item item-input item-stacked-label" ng-class="{ 'item-error': formAddExercise.$attempt && formAddExercise.city.$invalid, 'item-valid': formAddExercise.city.$valid }">
+    <span class="input-label">City</span>
+    <input type="text" name="name" ng-model="exercise.name" placeholder="Push Up" required="required">
+  </label>
+  <button class="button button-full button-positive" type="button" ng-click="submit()">Add</button>
+</form>
