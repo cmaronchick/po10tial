@@ -81,35 +81,7 @@ angular.module('po10tial.controllers',['po10tial.services'])
 
   })
 
-.controller('exercisesCtrl', function($scope, $stateParams, Exercises) {
-    $scope.exercises = Exercises.all();
 
-    $scope.exerciseListItem = {
-      name: '',
-      id: $scope.exercises.length
-    };
-
-    $scope.addExerciseListItem = function(exerciseListItem) {
-      $scope.exercises.push({
-        name: $scope.exerciseListItem.name,
-        id:  $scope.exercises.length
-      });
-
-      $scope.exercisesListItem = {
-        name: ''
-      };
-
-      Exercises.save($scope.exercises);
-    };
-
-    $scope.deleteExerciseListItem = function(index) {
-      $scope.exercises.splice(index, 1);
-      Exercises.save($scope.exercises);
-    }
-
-
-
-  })
 
 .controller('exerciseCtrl', function($scope, $stateParams, Exercises) {
     

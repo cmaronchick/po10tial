@@ -4,20 +4,38 @@
     <!-- List all existing favorites -->
     <div class="item item-input-inset">
     <label class="item-input-wrapper">
+      Name: 
     <input type="text" ng-model="exerciseListItem.name">
+    </label>
+    <label class="item-input-wrapper">
+      Muscle Group: 
+      <input type="text" ng-model="exerciseListItem.muscleGroup">
     </label>
     <button class="button button-small" ng-click="addExerciseListItem()">
           Add
     </button>
     </div>
     <div class="list">
-      <ion-list>
+      <ion-list delegate-handle="exercise-list">
         <ion-item
           class="item-icon-right"
-          ng-repeat="exercise in exercises track by exercise.id"
-          ui-sref="exerciseDetail({exerciseId: exercise.id})">
-          {{ exercise.id }} | {{ exercise.name }}
+          ng-repeat="exercise in exercises track by exercise.id">
+          <div id="show{{exercise.id}}" ng-show="!showEdit{{exercise.id}}"
+          ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }}</div>
+          <div id="edit{{exercise.id}}" ng-show="showEdit{{exercise.id}}" class="item item-input-inset">
+            <label class="item-input-wrapper">
+            <input ng-model="inlineExerciseListItem.name" type="text" value="{{ exercise.name }}">
+            </label>
+            <label class="item-input-wrapper">
+            <input ng-model="inlineExerciseListItem.muscleGroup" type="text" value="{{ exercise.muscleGroup}}">
+            </label>
+            <button class="button button-small" ng-click="showEdit{{exercise.id}}=false; updateExerciseListItem($index, inlineExerciseListItem.name)">Save</button>
+            <button class="button button-small" ng-click="showEdit{{exercise.id}}=false">Cancel</button>
+          </div>           
           <i class="icon ion-ios-arrow-forward icon-accessory"></i>
+          <ion-option-button class="button-dark" ng-click="showEdit{{exercise.id}}=true; editExerciseListItem('{{exercise.name}}')">
+            Edit
+          </ion-option-button>
           <ion-option-button class="button-assertive" ng-click="deleteExerciseListItem($index)">
             Remove
           </ion-option-button>
