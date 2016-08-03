@@ -1,8 +1,12 @@
 'use strict'
 angular.module('po10tial')
 
-.controller('exercisesCtrl', function($scope, $stateParams, $ionicListDelegate, Exercises) {
+.controller('exercisesCtrl', function($scope, $stateParams, $ionicListDelegate, Exercises, $ionicNavBarDelegate) {
+    
+     $ionicNavBarDelegate.showBackButton(false);
+
     $scope.exercises = Exercises.all();
+    
 
     $scope.exerciseListItem = {
       //name: '',
@@ -10,10 +14,14 @@ angular.module('po10tial')
     };
 
     $scope.addExerciseListItem = function(exerciseListItem) {
+      if ($scope.exercises[$scope.exercises.length]) {
+        return false;
+      }
       $scope.exercises.push({
         name: $scope.exerciseListItem.name,
         muscleGroup: $scope.exerciseListItem.muscleGroup,
-        id:  $scope.exercises.length
+        id: $scope.exercises.length,
+          sets: []
       });
 
       $scope.exercisesListItem = {
@@ -27,17 +35,31 @@ angular.module('po10tial')
       $scope.exercises.splice(index, 1);
       Exercises.save($scope.exercises);
     }
-    $scope.editExerciseListItem = function (exerciseName) {
+    
+    $scope.editExerciseListItem = function (exerciseName, muscleGroup) {
         //alert(exerciseName);
         $scope.inlineExerciseListItem = {
             name: exerciseName,
+            muscleGroup: muscleGroup,
             word: /^\s*\w*\s*$/
         };
         $ionicListDelegate.$getByHandle('exercise-list').closeOptionButtons();        
     }
-    $scope.updateExerciseListItem = function(index, exerciseName) {
+    $scope.updateExerciseListItem = function(index, exerciseName, muscleGroup) {
         $scope.exercises[index].name = exerciseName;
+        $scope.exercises[index].muscleGroup = muscleGroup;
         Exercises.save($scope.exercises);
     }
+    
+    $scope.toggleGroup = function(group) {
+      if ($scope.isGroupShown(group)) {
+        $scope.shownGroup = null;
+      } else {
+        $scope.shownGroup = group;
+      }
+    };
+    $scope.isGroupShown = function(group) {
+      return $scope.shownGroup === group;
+    };
     
   });

@@ -5,7 +5,7 @@ angular.module('po10tial.services', ['ionic'])
  * from local storage, and also lets us save and load the
  * last active project index.
  */
-.factory('Exercises', function() {
+.factory('Exercises', function($http) {
   return {
     all: function() {
       var exercisesString = window.localStorage['exercises'];
@@ -15,7 +15,18 @@ angular.module('po10tial.services', ['ionic'])
       return [];
     },
     save: function(exercises) {
-      window.localStorage['exercises'] = angular.toJson(exercises);
+      console.log(exercises);
+      var exercisesJSON = {
+        exercisesJSON: exercises
+      };
+      console.log(exercisesJSON);
+      $http.post("http://boldallies.com/cgi-bin/api.php", exercisesJSON)
+      
+      .success(function (data, status, headers, config) {
+          console.log("Data:" + data + ", headers: " + headers);
+          //, status: " + status + ", headers: " + headers + ", config: " + config);
+      });
+      //window.localStorage['exercises'] = angular.toJson(exercises);
     },
     newProject: function(exerciseName) {
       // Add a new project
@@ -31,4 +42,12 @@ angular.module('po10tial.services', ['ionic'])
       window.localStorage['lastActiveExercise'] = index;
     }
   }
+})
+
+.factory('Exercise', function($http, exercises, set) {
+    return {
+        save: function (set) {
+            window.localStorage['exercises'] = angular.toJson(exercises);
+        }
+    }
 })

@@ -19,9 +19,17 @@
       <ion-list delegate-handle="exercise-list">
         <ion-item
           class="item-icon-right"
-          ng-repeat="exercise in exercises track by exercise.id">
-          <div id="show{{exercise.id}}" ng-show="!showEdit{{exercise.id}}"
-          ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }}</div>
+          ng-repeat="exercise in exercises track by exercise.id" ng-class="{active: isGroupShown(exercise)}" ng-click="toggleGroup(exercise)">
+          <div id="show{{exercise.id}}" ng-show="!showEdit{{exercise.id}}">
+            <span ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }} | {{exercise.muscleGroup}}</span>
+              <i class="icon" ng-class="isGroupShown(exercise) ? 'ion-minus' : 'ion-plus'"></i>
+              
+              <ion-item class="item-accordion"
+                        ng-repeat="set in exercise.sets"
+                        ng-show="isGroupShown(exercise)">
+                {{set}} | {{set.date}} | {{set.reps}} | {{set.weight}}
+              </ion-item>   
+          </div>
           <div id="edit{{exercise.id}}" ng-show="showEdit{{exercise.id}}" class="item item-input-inset">
             <label class="item-input-wrapper">
             <input ng-model="inlineExerciseListItem.name" type="text" value="{{ exercise.name }}">
@@ -33,7 +41,7 @@
             <button class="button button-small" ng-click="showEdit{{exercise.id}}=false">Cancel</button>
           </div>           
           <i class="icon ion-ios-arrow-forward icon-accessory"></i>
-          <ion-option-button class="button-dark" ng-click="showEdit{{exercise.id}}=true; editExerciseListItem('{{exercise.name}}')">
+          <ion-option-button class="button-dark" ng-click="showEdit{{exercise.id}}=true; editExerciseListItem('{{exercise.name}}', '{{exercise.muscleGroup}}')">
             Edit
           </ion-option-button>
           <ion-option-button class="button-assertive" ng-click="deleteExerciseListItem($index)">
