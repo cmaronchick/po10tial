@@ -8,11 +8,24 @@ angular.module('po10tial.services', ['ionic'])
 .factory('Exercises', function($http) {
   return {
     all: function() {
-      var exercisesString = window.localStorage['exercises'];
-      if (exercisesString) {
-        return angular.fromJson(exercisesString);
-      }
-      return [];
+      var exercisesString = $http({
+        method: 'GET',
+        url: 'http://boldallies.com/cgi-bin/retrieve-exercises.php'
+      }).then(function successCallback(response) {        
+        console.log("Success");
+        if (response.data.exercisesJSON) {
+          //console.log("angular.fromJson(response.data.exercisesJSON) = ");
+          //console.log(angular.fromJson(response.data.exercisesJSON));
+          console.log("exercisesString = ");
+          console.log(angular.fromJson(response.data.exercisesJSON));
+          return angular.fromJson(response.data.exercisesJSON);
+        } else {
+          return [];
+        }
+      }, function errorCallback(response) {
+        console.log("errorCallback");
+        return window.localStorage['exercises'];
+      });
     },
     save: function(exercises) {
       console.log(exercises);
@@ -20,7 +33,7 @@ angular.module('po10tial.services', ['ionic'])
         exercisesJSON: exercises
       };
       console.log(exercisesJSON);
-      $http.post("http://boldallies.com/cgi-bin/api.php", exercisesJSON)
+      $http.post("http://boldallies.com/cgi-bin/save-exercises.php", exercisesJSON)
       
       .success(function (data, status, headers, config) {
           console.log("Data:" + data + ", headers: " + headers);
