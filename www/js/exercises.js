@@ -15,7 +15,7 @@ angular.module('po10tial')
           //reject();
         }*/
       
-      .then(function(fromResolve) {
+      exercisesVar.then(function(fromResolve) {
         console.log("exercises returned - " + fromResolve);
 
         //$scope.exercises = getExercises();

@@ -26,6 +26,7 @@ angular.module('po10tial.services', ['ionic'])
         console.log("errorCallback");
         return window.localStorage['exercises'];
       });
+      return exercisesString;
     },
     save: function(exercises) {
       console.log(exercises);

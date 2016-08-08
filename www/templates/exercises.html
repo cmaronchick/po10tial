@@ -24,11 +24,13 @@
             <span ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }} | {{exercise.muscleGroup}}</span>
               <i class="icon" ng-class="isGroupShown(exercise) ? 'ion-minus' : 'ion-plus'"></i>
               
-              <ion-item class="item-accordion"
-                        ng-repeat="set in exercise.sets"
-                        ng-show="isGroupShown(exercise)">
-                {{set}} | {{set.date}} | {{set.reps}} | {{set.weight}}
-              </ion-item>   
+              <div style="margin-top:10px;">
+                <ion-item class="item-accordion"
+                          ng-repeat="set in exercise.sets"
+                          ng-show="isGroupShown(exercise)">
+                  {{set}} | {{set.date}} | {{set.reps}} | {{set.weight}}
+                </ion-item>   
+              </div>
           </div>
           <div id="edit{{exercise.id}}" ng-show="showEdit{{exercise.id}}" class="item item-input-inset">
             <label class="item-input-wrapper">
