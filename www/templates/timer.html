@@ -5,7 +5,7 @@
             <div class="progress-wrapper">
                 <div class="progress ng-binding" ng-style="getStyle()" style="text-align: center;top: 50%; bottom: auto; left: 50%; transform: translateY(-50%) translateX(-50%); font-size: 35.7143px;">
                     {{ myTimer }} {{ currentSecs }}/{{ timerValue }} {{ totalSecs }}
-                    <div id="totalReps">Total Reps: {{totalReps}}</div>
+                    <div id="totalReps">Total Reps: {{ totalReps }}</div>
                 </div>
                 <!--<div class="progress ng-cloak" ng-style="getStyle()">{{ myTimer }}/{{ timerValue }}</div>-->
                 <round-progress max="timerValue"
@@ -32,21 +32,21 @@
                 </round-progress>
             </div>
         </div>
-        <div style="position:relative; margin-top: 20px; left:38%">
+        <div id="weightandbuttons">
 
-            <div id="weightLabel" class="item item-input-inset" style="position: relative; float: left;">
+            <div id="weightLabel" class="item item-input-inset">
                 <label class="item-input-wrapper">
                     Weight:
                     <input type="number" ng-model="set.weight"> lbs
                 </label>
             </div>
-            <div style="clear: both; padding: 5px 0px"></div>
-            <div id="timerButtons" style="position: relative;float: left;">
+            <div id="timerButtons">
                 <button ng-click="start()" class="button button-positive" id="startButton" style="{{ startButtonVisibility }}" ng-show="!timerStarted">Start the timer</button>
                 <button ng-click="stop()" class="button button-energized" id="stopButton" style="{{ stopButtonVisibility }}" ng-hide="!timerStarted">Stop the timer</button>
                 <button ng-click="saveSet()" class="button button-assertive" id="resetButton" style="{{ saveButtonVisibility }}" ng-show="savetheSet">Save the Set</button>
                 <button ng-click="reset()" class="button button-assertive" id="resetButton">Reset the timer</button>
             </div>
+            <div style="clear: both; padding: 5px 0px"></div>
         </div>
     </ion-content>
 </ion-view>
