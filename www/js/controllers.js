@@ -11,13 +11,26 @@ angular.module('po10tial.controllers',['po10tial.services'])
     $scope.workoutDateYear = workoutDate.getFullYear();
     $scope.workoutDateMonth = workoutDate.getMonth();
     $scope.workoutDateDay = workoutDate.getDay();
+    var exercisesVar = Exercises.all(); 
+    var exercise;
+
+    exercisesVar.then(function(fromResolve) {
+
+        console.log("Timer - fromResolve = " + fromResolve);
+        $scope.exercise = fromResolve[$stateParams.exerciseId];
+        console.log("timer - " + $stateParams.exerciseId);
     
-    $scope.exercises = Exercises.all();
-    $scope.exercise = $scope.exercises[$stateParams.exerciseId];
-    if(!$scope.exercise.sets) {
-        $scope.exercise.sets = [];
-    }
-    
+        console.log("timer - " + $scope.exercise.name);
+        if(!$scope.exercise.sets) {
+            $scope.exercise.sets = [];
+        }
+
+        //$scope.exercise = exercisesVar[$stateParams.exerciseId];
+        return $scope.exercise;
+    })
+    .catch(function (fromReject) {
+        console.log("No exercises returned - " + fromReject);
+    });
     var timerValue = 10;
     var totalSecs = "seconds";
     var weight = $scope.weight;
@@ -108,10 +121,31 @@ angular.module('po10tial.controllers',['po10tial.services'])
 .controller('exerciseCtrl', function($scope, $stateParams, Exercises, $ionicNavBarDelegate) {
     
      $ionicNavBarDelegate.showBackButton(true);
-    
-    $scope.exercises = Exercises.all();
-    $scope.exercise = $scope.exercises[$stateParams.exerciseId];
-    $scope.sets = $scope.exercise.sets;
+     var exercisesVar = Exercises.all(); 
+     
+     exercisesVar.then(function(fromResolve) {
+     console.log("exercises returned - " + fromResolve);
+
+        //$scope.exercises = getExercises();
+        //console.log($scope.exercises);
+        //var allExercises = "";
+        /*while (allExercises === "") {
+          console.log(allExercises);
+          getExercises(allExercises);      
+        };*/
+     $scope.exercises = fromResolve;
+     $scope.exercise = $scope.exercises[$stateParams.exerciseId];
+     
+     console.log("exercises - " + $scope.exercises + "; exercises.length = " + $scope.exercises.length);
+     for (var i; i < $scope.exercises.length; i++) {
+         console.log("exercise - " + i + " - " + $scope.exercises[i]);
+     }
+     console.log("exerciseId - " + $scope.exercise);
+     if ($scope.exercise.sets) {
+     $scope.sets = $scope.exercise.sets;
+     } else {
+        $scope.sets = [];
+     }
     /*$scope.sets = function () {
         if ($scope.exerice.sets) {
             return $scope.exercise.sets;
@@ -120,4 +154,9 @@ angular.module('po10tial.controllers',['po10tial.services'])
         }
     }*/
     //$scope.sets = [{id: 1, date: "7/20/2016", weight: 50, reps: 3}, {id: 2, date: "7/20/2016", weight: 50, reps: 2}, {id: 3, date: "7/20/2016", weight: 50, reps: 1}]
-    });
+    })
+    
+      .catch(function(fromReject) {
+        console.log("No exercises returned - " + fromReject);
+      })
+});
