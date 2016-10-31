@@ -17,6 +17,7 @@
 .progress-wrapper{
     position: relative;
 }
+
 #totalReps {
     font-size: 2.0em;
     padding: 10px;
@@ -45,3 +46,36 @@ label {margin-right: 10px;}
 .list .item.item-accordion.ng-hide-remove {
   display: block !important;
 }
+
+/* Exercises List */
+#addExerciseForm {
+    width: 100%;
+}
+
+#addExerciseForm div {
+    float: left;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+/* Timer Screen */
+
+#weightandbuttons {    
+    border: 1px solid #000;
+}
+#weightandbuttons div {    
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+#timerButtons {
+}
+#timerButtons button {
+    float: left;
+    margin: 5px auto;
+    width: 100%;
+}
+
+/* End Timer Screen */

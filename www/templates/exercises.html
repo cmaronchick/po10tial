@@ -2,18 +2,24 @@
 <ion-view title="Exercises">
 <ion-content>
     <!-- List all existing favorites -->
-    <div class="item item-input-inset">
-    <label class="item-input-wrapper">
-      Name: 
-    <input type="text" ng-model="exerciseListItem.name">
-    </label>
-    <label class="item-input-wrapper">
-      Muscle Group: 
-      <input type="text" ng-model="exerciseListItem.muscleGroup">
-    </label>
-    <button class="button button-small" ng-click="addExerciseListItem()">
-          Add
-    </button>
+    <div class="item item-input-inset" id="addExerciseForm">
+        <div>
+            <label class="item-input-wrapper">
+              Name: 
+            <input type="text" ng-model="exerciseListItem.name">
+            </label>
+        </div>
+        <div>
+            <label class="item-input-wrapper">
+                Muscle Group:
+                <input type="text" ng-model="exerciseListItem.muscleGroup">
+            </label>
+        </div>  
+        <div>
+            <button class="button button-small" ng-click="addExerciseListItem()">
+                  Add
+            </button>
+        </div>
     </div>
     <div class="list">
       <ion-list delegate-handle="exercise-list">
@@ -21,7 +27,7 @@
           class="item-icon-right"
           ng-repeat="exercise in exercises track by exercise.id" ng-class="{active: isGroupShown(exercise)}" ng-click="toggleGroup(exercise)">
           <div id="show{{exercise.id}}" ng-show="!showEdit{{exercise.id}}">
-            <span ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }} | {{exercise.muscleGroup}}</span>
+            <div ui-sref="exerciseDetail({exerciseId: exercise.id})">{{ exercise.id }} | {{ exercise.name }} | {{exercise.muscleGroup}}</div>
               <i class="icon" ng-class="isGroupShown(exercise) ? 'ion-minus' : 'ion-plus'"></i>
               
               <div style="margin-top:10px;">
