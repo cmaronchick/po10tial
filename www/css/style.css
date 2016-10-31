@@ -18,14 +18,7 @@
     position: relative;
 }
 
-#totalReps {
-    font-size: 2.0em;
-    padding: 10px;
-}
 
-.timerbutton {
-    margin:10px;
-}
 h1 {margin: 10px;}
 label {margin-right: 10px;}
 
@@ -78,4 +71,11 @@ label {margin-right: 10px;}
     width: 100%;
 }
 
+.timerbutton {
+    margin:10px;
+}
+#totalReps {
+    font-size: 2.0em;
+    padding: 10px;
+}
 /* End Timer Screen */

@@ -1,0 +1,697 @@
+{
+  "id": 1,
+  "phases": [
+    {
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "id": 0,
+      "thumbnail": "thumbnails/video.jpg",
+      "title": "Say Hello to Premium Class",
+      "topics": [
+        {
+          "groups": [
+            1,
+            2,
+            3
+          ],
+          "id": 0,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 1,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Intro Video - Slide 0",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 0
+            }
+          ],
+          "thumbnail": "thumbnails/video.jpg",
+          "title": "Welcome to Alaska Premium Class!"
+        }
+      ]
+    },
+    {
+      "groups": [
+        1,
+        3
+      ],
+      "id": 1000,
+      "thumbnail": "thumbnails/video.jpg",
+      "title": "Phase 1000 - Groups 1,3",
+      "topics": [
+        {
+          "groups": [
+            1,
+            3
+          ],
+          "id": 1000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 1,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Intro Video - Slide 100",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 100
+            },
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 2,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 200",
+                  "type": "article"
+                }
+              ],
+              "id": 200
+            },
+            {
+              "contents": [
+                {
+                  "id": 3,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (300) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 300
+            }
+          ],
+          "thumbnail": "thumbnails/blog.jpg",
+          "title": "Topic 1000"
+        }
+      ]
+    },
+    {
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "id": 2000,
+      "thumbnail": "thumbnails/video.jpg",
+      "title": "Phase 2000 - Groups 1,2,3",
+      "topics": [
+        {
+          "groups": [
+            1,
+            3
+          ],
+          "id": 2000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 4,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 400",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 400
+            },
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 5,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 500",
+                  "type": "article"
+                }
+              ],
+              "id": 500
+            },
+            {
+              "contents": [
+                {
+                  "id": 6,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (600) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 600
+            }
+          ],
+          "thumbnail": "thumbnails/blog.jpg",
+          "title": "Topic 2000 - Groups 1,3"
+        },
+        {
+          "groups": [
+            2
+          ],
+          "id": 3000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 4,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 700",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 700
+            },
+            {
+              "contents": [
+                {
+                  "id": 6,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (800) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 800
+            }
+          ],
+          "thumbnail": "thumbnails/video.jpg",
+          "title": "Topic 3000 - Group 2"
+        },
+        {
+          "groups": [
+            3
+          ],
+          "id": 4000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 7,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 900",
+                  "type": "article"
+                }
+              ],
+              "id": 900
+            }
+          ],
+          "thumbnail": "thumbnails/quiz.jpg",
+          "title": "Topic 4000 - Group 3"
+        },
+        {
+          "groups": [
+            1,
+            2
+          ],
+          "id": 5000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 8,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 1000",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 1000
+            }
+          ],
+          "thumbnail": "thumbnails/blog.jpg",
+          "title": "Topic 5000 - Groups 1,2"
+        }
+      ]
+    },
+    {
+      "groups": [
+        1
+      ],
+      "id": 3000,
+      "thumbnail": "thumbnails/quiz.jpg",
+      "title": "Phase 3000 - Group 1",
+      "topics": [
+        {
+          "groups": [
+            1,
+            3
+          ],
+          "id": 6000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 9,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 1100",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 1100
+            },
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 10,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 1200",
+                  "type": "article"
+                }
+              ],
+              "id": 1200
+            },
+            {
+              "contents": [
+                {
+                  "id": 11,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (1300) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 1300
+            }
+          ],
+          "thumbnail": "thumbnails/video.jpg",
+          "title": "Topic 6000"
+        },
+        {
+          "groups": [
+            1,
+            2
+          ],
+          "id": 7000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 12,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 1400",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 1400
+            },
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 13,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 1500",
+                  "type": "article"
+                }
+              ],
+              "id": 1500
+            },
+            {
+              "contents": [
+                {
+                  "id": 14,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (1600) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 1600
+            }
+          ],
+          "thumbnail": "thumbnails/blog.jpg",
+          "title": "Topic 7000"
+        },
+        {
+          "groups": [
+            1
+          ],
+          "id": 8000,
+          "slides": [
+            {
+              "contents": [
+                {
+                  "id": 15,
+                  "thumbnail": "thumbnails/video.jpg",
+                  "title": "Video - Slide 1700",
+                  "type": "video",
+                  "video": {
+                    "path": "videos/Alaska_Final_Version_60sec.mp4"
+                  }
+                }
+              ],
+              "id": 1700
+            },
+            {
+              "contents": [
+                {
+                  "article": {
+                    "path": "articles/article.html"
+                  },
+                  "id": 16,
+                  "thumbnail": "thumbnails/blog.jpg",
+                  "title": "Article - Slide 1800",
+                  "type": "article"
+                }
+              ],
+              "id": 1800
+            },
+            {
+              "contents": [
+                {
+                  "id": 17,
+                  "quiz": {
+                    "questions": [
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which is your favorite airline?"
+                      },
+                      {
+                        "answer": 1,
+                        "choices": [
+                          {
+                            "text": "Alaska Airlines",
+                            "value": 1
+                          },
+                          {
+                            "text": "American Airlines",
+                            "value": 2
+                          },
+                          {
+                            "text": "Delta Airlines",
+                            "value": 3
+                          },
+                          {
+                            "text": "Virgin Airlines",
+                            "value": 4
+                          }
+                        ],
+                        "question": "Which airline has the best brand?"
+                      }
+                    ]
+                  },
+                  "thumbnail": "thumbnails/quiz.jpg",
+                  "title": "Quiz (1600) - Choose Your Favorite Airline",
+                  "type": "quiz"
+                }
+              ],
+              "id": 1900
+            }
+          ],
+          "thumbnail": "thumbnails/video.jpg",
+          "title": "Topic 8000"
+        }
+      ]
+    }
+  ]
+}

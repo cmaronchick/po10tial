@@ -2,35 +2,20 @@
 <ion-view title="Exercises">
 <ion-content>
     <!-- List all existing favorites -->
-<<<<<<< HEAD
-    <div class="item item-input-inset">
-        <div>
-            <label class="item-input-wrapper" for="exerciseName">
-                Name:
-            </label>    
-            <input type="text" id="exerciseName" ng-model="exerciseListItem.name">
-        </div>
-        <div>
-            <label class="item-input-wrapper" for="muscleGroup">
-                Muscle Group:
-            </label>
-            <input type="text" id="muscleGroup" ng-model="exerciseListItem.muscleGroup">
-        </div>
-=======
+
     <div class="item item-input-inset" id="addExerciseForm">
-        <div>
+        <div style="float">
             <label class="item-input-wrapper">
-              Name: 
-            <input type="text" ng-model="exerciseListItem.name">
+                Name:
             </label>
+            <input type="text" ng-model="exerciseListItem.name">
         </div>
         <div>
             <label class="item-input-wrapper">
                 Muscle Group:
-                <input type="text" ng-model="exerciseListItem.muscleGroup">
             </label>
+                <input type="text" ng-model="exerciseListItem.muscleGroup">
         </div>  
->>>>>>> add-php-endpoint
         <div>
             <button class="button button-small" ng-click="addExerciseListItem()">
                   Add
